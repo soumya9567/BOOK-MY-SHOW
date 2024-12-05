@@ -1,7 +1,7 @@
 *{
    margin: 0;
    padding: 0;
-   overflow: hidden;
+   overflow-x: hidden;
    /* margin-left: 40px;
    margin-right: 40px; */
 }
@@ -93,4 +93,87 @@ nav{
    margin-left:40px ;
    opacity: 0.7;
    font-size: small;
+}
+
+.slider {
+   width: 100vw;
+   height: 300px;
+   border-radius: 5px;
+   margin-left: 30px;
+   background-size: cover; 
+   background-position: center;
+   animation: slide 9s infinite; 
+   display: block;
+ 
+ }
+ 
+ @keyframes slide {
+   0% {
+     background-image: url('./images/slider img1.png');
+   }
+   33% {
+     background-image: url('./images/slider image pic2.png');
+   }
+   66% {
+     background-image: url('./images/slider image pic3.png');
+   }
+   100% {
+     background-image: url('./images/slider img1.png'); /* Reset to first image */
+   }
+ }
+ 
+ .Movies {
+   display: grid;
+   grid-template-columns: repeat(6, 200px); 
+   margin-left: 50px;
+   gap: 30px; 
+}
+
+.Movies-grid {
+   width: 200px; 
+   height: 350px;
+   overflow: hidden;
+   border-radius: 5px; 
+   padding-bottom: 100px;
+}
+
+.Movies-grid h4{
+   color: black;
+}
+
+.Movies-grid img {
+   width: 100%; 
+   height: 100%; 
+   object-fit: cover; 
+  
+}
+.top-container {
+   /* display: flex; */
+   margin-right: 20px;
+   display: grid;
+   margin-right: 20px;
+   margin-left: 20px;
+
+
+   grid-template-columns: repeat(5, 280px);
+   row-gap: 30px;
+}
+
+.new-component img {
+   width: 200px;
+   height: 340px;
+   object-fit: cover;
+   border-radius: 10px;
+   margin-right: 20px;
+   /* Ensure the image maintains its aspect ratio and fills the 400px by 400px area */
+}
+
+.new-component p {
+   opacity: 0.7;
+}
+
+.new-component {
+   border-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
 }
